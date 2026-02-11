@@ -218,7 +218,7 @@ fig.update_layout(
 st.plotly_chart(fig, use_container_width=True)
 
 # Métricas e Análise
-st.markdown("### 📊 Inteligência do Modelo")
+st.markdown("### 📊 INTELIGÊNCIA DO MODELO")
 m1, m2, m3 = st.columns(3)
 with m1: st.metric("RMSE", f"{rmse:.2f}")
 with m2: st.metric("MAE", f"{mae:.2f}")
@@ -228,10 +228,14 @@ with m3:
 
 st.divider()
 
+# Formatando valores para o padrão brasileiro (vírgula como decimal) nos insights
+mae_br = f"{mae:.2f}".replace('.', ',')
+rmse_br = f"{rmse:.2f}".replace('.', ',')
+
 st.markdown(f"""
-### 📓 Insights Estratégicos
+### 📓 INSIGHTS ESTRATÉGICOS
 A aplicação da **Regressão de Grau {grau_polinomio}** revela um comportamento de **{trend}**.
-- **Ajuste:** O erro médio absoluto ({mae:.2f}) indica que o modelo ignora flutuações irrelevantes para focar na trajetória estrutural.
+- **Ajuste:** O erro médio absoluto ({mae_br}) indica que o modelo ignora flutuações irrelevantes para focar na trajetória estrutural.
 - **Projeção:** A curvatura atual sugere uma {'aceleração' if grau_polinomio > 1 else 'continuidade'} dos preços para o próximo quindênio.
 """)
 
