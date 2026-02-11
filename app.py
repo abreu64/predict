@@ -87,8 +87,8 @@ st.markdown("""
 
     /* Sidebar Styling */
     [data-testid="stSidebar"] {
-        background-color: #151515 !important; /* Grafite mais claro */
-        border-right: 1px solid rgba(255, 49, 49, 0.3);
+        background-color: #404040 !important; /* Cinza médio para máxima visibilidade */
+        border-right: 1px solid rgba(255, 49, 49, 0.4);
     }
     [data-testid="stSidebar"] .stMarkdown, [data-testid="stSidebar"] p, [data-testid="stSidebar"] span, [data-testid="stSidebar"] li {
         color: #ffffff !important; /* Branco Puro */
