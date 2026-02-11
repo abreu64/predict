@@ -87,11 +87,15 @@ st.markdown("""
 
     /* Sidebar Styling */
     [data-testid="stSidebar"] {
-        background-color: #0a0a0a !important;
-        border-right: 1px solid rgba(255, 49, 49, 0.2);
+        background-color: #151515 !important; /* Grafite mais claro */
+        border-right: 1px solid rgba(255, 49, 49, 0.3);
     }
-    [data-testid="stSidebar"] .stMarkdown {
-        color: #e0e0e0 !important;
+    [data-testid="stSidebar"] .stMarkdown, [data-testid="stSidebar"] p, [data-testid="stSidebar"] span, [data-testid="stSidebar"] li {
+        color: #ffffff !important; /* Branco Puro */
+        font-weight: 500 !important;
+    }
+    [data-testid="stSidebar"] h3 {
+        color: #ff4d4d !important; /* Vermelho levemente mais vibrante para contraste */
     }
 
     /* Expander */
@@ -107,9 +111,9 @@ st.markdown("""
         padding: 15px; 
         border: 2px solid #ff3131; 
         border-radius: 12px; 
-        background: rgba(255, 49, 49, 0.1);
-        box-shadow: 0 0 15px rgba(255, 49, 49, 0.2);
-        margin-bottom: 20px;
+        background: rgba(255, 49, 49, 0.15); /* Fundo um pouco mais opaco */
+        box-shadow: 0 0 20px rgba(255, 49, 49, 0.3);
+        margin-bottom: 25px;
     }
 </style>
 """, unsafe_allow_html=True)
